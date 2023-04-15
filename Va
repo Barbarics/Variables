@@ -1,0 +1,14 @@
+getgenv().keys = {"BetaTest", "BetaTester", "BetaScript", "ScriptTest"}
+getgenv().randomIndex = math.random(1, #keys)
+getgenv().keyset = keys[randomIndex]
+
+
+if alreadyRan then 
+    return warn("Already ran") 
+    
+end
+
+getgenv().alreadyRan = alreadyRan or true
+
+print(keyset)
+setclipboard(keyset)
